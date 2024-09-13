@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Adaptation</title>
+  <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+
+<header id="1" class="header">
+  <h1 class="x">Hello from JavaScript!</h1>
+    <label for="header-input">Just to be here: </label><input id="header-input">
+  <script src="src/functions.js"></script>
+  <script src="src/listeners.js"></script>
+</header>
+
+<div class="container">
+  <div id="2" class="sidebar-left">
+    <p class="menu">Webpage menu</p>
+    <br>
+    Page navigation:
+    <div class="links">
+      <ol>
+        <li><a href="#">Home</a></li>
+        <li><a href="pages/zoroast.html">Pallez Zoroast</a></li>
+        <li><a href="pages/medici.html">Medici</a></li>
+        <li><a href="pages/abraham.html">Abraham</a></li>
+        <li><a href="pages/tudor.html">Tudor</a></li>
+        <li><a href="pages/asg.html">Asg</a></li>
+        <li><a href="pages/ouroboros.html">Ouroboros</a></li>
+        <li><a href="pages/trunsoest.html">Trunsoest</a></li>
+      </ol>
+    </div>
+    <br>
+    <label for="menu-input">Just to be here: </label><input class="sidebar" id="menu-input">
+  </div>
+  <div class="main">
+    <div id="3" class="top-middle">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <button onclick="changeContents()">Swap contents!</button>
+      <label for="top-input">Just to be here: </label><input id="top-input">
+    </div>
+    <div id="5" class="main-content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nunc sapien, bibendum aliquet... Lorem
+      ipsum dolor sit amet, consectetur adipiscing elit. Integer nunc sapien, bibendum aliquet? Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Integer nunc sapien, bibendum aliquet!
+      <div class="image">
+        <img src="public/images/image.jpg" class="angels" alt="Ancient Angels" usemap="#angelsmap">
+
+        <map name="angelsmap">
+          <area shape="rect" coords="0,0,120,600" href="pages/zoroast.html" alt="Zoroast">
+          <area shape="rect" coords="120,0,280,600" href="pages/medici.html" alt="Medici">
+          <area shape="rect" coords="280,0,360,600" href="pages/abraham.html" alt="Abraham">
+          <area shape="rect" coords="360,0,480,600" href="pages/tudor.html" alt="Tudor">
+          <area shape="rect" coords="480,0,640,600" href="pages/asg.html" alt="Asg">
+          <area shape="rect" coords="640,0,800,600" href="pages/ouroboros.html" alt="Ouroboros">
+          <area shape="rect" coords="800,0,1120,600" href="pages/trunsoest.html" alt="Trunsoest">
+        </map>
+      </div>
+      <button id="area-button" onclick="parallelogramArea()">Show area of parallelogram with base 5 and height 3!
+      </button>
+
+      <label for="number-area">Type in here some number: </label><input id="number-area">
+      <button id="number-button" onclick="findBiggestDigit()">Find biggest digit!</button>
+    </div>
+  </div>
+
+  <div class="sidebar-right">
+    <div class="top-right" id="4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet sodales velit. Maecenas in porta
+      felis, nec gravida sem. Duis euismod lectus at orci tincidunt tincidunt id eget velit.
+      <label for="right-input">Just to be here: </label><input class="sidebar" id="right-input">
+    </div>
+    <div id="6" class="bottom-right">
+      <label>
+        Right
+        <input onchange="rightRadio(event)" id="right-radio" type="checkbox">
+      </label>
+      <label>
+        Centered
+        <input onchange="centerRadio(event)" id="center-radio" type="checkbox">
+      </label>
+    </div>
+  </div>
+</div>
+
+<footer id="7" class="footer">
+  <label for="footer-input">Just to be here: </label><input id="footer-input">
+  <h2 class="y">... this is the best site ever, come back again!</h2>
+</footer>
+</body>
+</html>
