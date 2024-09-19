@@ -30,18 +30,21 @@ function createList() {
     const documentItem = document.getElementById(item);
 
     documentItem.addEventListener('select', function() {
-      const itemDiv = document.createElement('div');
-      itemDiv.id = `item-${item}`;
-      itemDiv.innerHTML = `<button>Add List ${item}</button>`;
+      if (!document.getElementById(`item-${item}`)) {
+        const itemDiv = document.createElement('div');
+        itemDiv.id = `item-${item}`;
+        itemDiv.innerHTML = `<button>Add List ${item}</button>`;
 
-      itemDiv.addEventListener('click', () => {
-        addInputField(documentItem, itemDiv);
-      });
+        itemDiv.addEventListener('click', () => {
+          addInputField(documentItem, itemDiv);
+        });
 
-      documentItem.appendChild(itemDiv);
+        documentItem.appendChild(itemDiv);
+      }
     });
   });
 }
+
 
 function addInputField(documentItem, itemDiv) {
   if (itemDiv.querySelector('form')) return;

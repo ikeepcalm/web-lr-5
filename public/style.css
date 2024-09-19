@@ -25,6 +25,11 @@ input {
     margin: 5px;
 }
 
+ul {
+    margin: 10px;
+    background-color: lightblue;
+}
+
 button {
     background: aquamarine;
     border: none;
