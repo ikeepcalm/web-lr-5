@@ -30,10 +30,9 @@ function createList() {
     const documentItem = document.getElementById(item);
 
     documentItem.addEventListener('select', function() {
-      documentItem.style.backgroundColor = 'red';
       const itemDiv = document.createElement('div');
       itemDiv.id = `item-${item}`;
-      itemDiv.innerHTML = `<strong>Item ${item}</strong>`;
+      itemDiv.innerHTML = `<button>Add List ${item}</button>`;
 
       itemDiv.addEventListener('click', () => {
         addInputField(documentItem, itemDiv);

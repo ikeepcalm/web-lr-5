@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
@@ -18,8 +18,15 @@ div {
     line-height: 23px;
 }
 
+input {
+    font-family: Arial, sans-serif;
+    line-height: 23px;
+    max-width: max(100%, 100px);
+    margin: 5px;
+}
+
 button {
-    background-color: lightblue;
+    background: aquamarine;
     border: none;
     color: black;
     padding: 10px 20px;
@@ -29,20 +36,7 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}
 
-input{
-    padding: 10px;
-    margin: 5px;
-    width: 20%;
-}
-
-label {
-    margin: 5px;
-}
-
-.sidebar{
-    width: 100%;
 }
 
 .header {
@@ -51,7 +45,7 @@ label {
     justify-content: left;
     align-items: center;
     flex: 0 1 10%;
-    padding: 0 20px;
+    padding: 5px;
 }
 
 .footer {
@@ -59,14 +53,13 @@ label {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 20px;
+    padding: 5px;
     flex: 0 1 10%;
 }
 
 .container {
     display: flex;
     flex: 1 1 auto;
-    height: 100vh;
     width: 100%;
     overflow: hidden;
 }
@@ -94,7 +87,6 @@ label {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 .menu {
@@ -112,26 +104,19 @@ label {
 
 .main-content {
     background-color: white;
-    height: 100%;
     flex: 1;
     padding: 10px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    flex-grow: max(1, 1);
 }
 
 .bottom-right {
     background-color: lightgreen;
-    height: 20%;
     flex: 0 1 auto;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
     padding: 5px;
-}
-
-.top-right{
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 100%;
 }
 
 .x, .y {
@@ -141,68 +126,39 @@ label {
     flex: 1;
 }
 
-.angels {
-    align-self: center;
-    background-color: antiquewhite;
-    padding: 2px;
-    width: max(80%, 100px);
-}
-
 .image {
     display: flex;
     justify-content: center;
 }
 
 @media only screen and (max-width: 768px) {
+
     .container {
         flex-direction: column;
-        overflow-y: visible;
     }
 
     .sidebar-left, .sidebar-right {
-        flex: 0 1 auto;
-        min-width: 100%;
         text-align: center;
     }
 
-    li{
-        margin-left: 5px;
+    input {
+        width: max(80%, 100px);
+    }
+
+    .angels{
+        width: max(80%, 100px);
     }
 
     .sidebar-left, .sidebar-right, .main, .main-content, .bottom-right {
-        padding: 5px;
-    }
-
-    .top-middle {
-        padding: 3px;
-    }
-
-    .main-content {
-        overflow-y: visible;
-        height: 150%;
+        padding: 10px;
     }
 
     .header, .footer {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .header {
-        padding: 5px 0;
-    }
-
-    .footer {
-        justify-content: center;
         padding: 5px 0;
     }
 
     .x, .y {
         max-width: 100%;
         text-align: center;
-    }
-
-    .image img {
-        width: 100%;
     }
 }
